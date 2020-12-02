@@ -20,7 +20,7 @@ One of Gatsby's strengths is in the size of its community and ecosystem of plugi
 [![Azimuth](/images/themes/azimuth-gatsby-theme.png)](https://app.stackbit.com/create?theme=azimuth&utm_source=blog&utm_campaing=gatsbythemes)
 
 **By**: Stackbit<br>
-**Demo**: <https://themes.stackbit.com/demos/azimuth&utm_source=blog&utm_campaign=gatsbythemes><br>
+**Demo**: <https://themes.stackbit.com/demos/azimuth><br>
 **Supported CMS**: Sanity, DatoCMS, Contentful, NetlifyCMS, Forestry CMS, Git<br>
 
 This is one of my favorite Stackbit templates. It's designed for a business like a SaaS service, for example, so it is fully featured and extremely versatile, packed with modules and feature options. It also looks great on mobile which is very important. To use this theme with Gatsby, head over to [Stackbit](https://app.stackbit.com/create?theme=azimuth&utm_source=blog&utm_campaing=gatsbythemes) and generate a site for free. From there you'll get a fully-functioning Azimuth Gatsby site in about 60 seconds, and you'll be able to easily edit it on the Stackbit Studio.
@@ -36,7 +36,7 @@ This is one of my favorite Stackbit templates. It's designed for a business like
 [![Fjord](/images/themes/fjord-gatsby-theme.png)](https://app.stackbit.com/create?theme=fjord&utm_source=blog&utm_campaing=gatsbythemes)
 
 **By**: Stackbit<br>
-**Demo**: <https://themes.stackbit.com/demos/fjord&utm_source=blog&utm_campaing=gatsbythemes><br>
+**Demo**: <https://themes.stackbit.com/demos/fjord><br>
 **Supported CMS**: Sanity, DatoCMS, Contentful, NetlifyCMS, Forestry CMS, Git<br>
 
 Another one of my favorite Stackbit templates is this beautiful blog theme. It's a great fit for personal websites, artist showcases and portfolios, to name a few. This Gatsby theme is especially easy to use and friendly for non-developers, so you can invite collaborators to join your site and add their content independently. To create this Fjord Gatsby site, go to [Stackbit](https://app.stackbit.com/create?theme=fjord&utm_source=blog&utm_campaing=gatsbythemes) and generate a free Jamstack site. Within about a minute you'll be inside the Stackbit Studio, ready to start editing.

@@ -1,0 +1,67 @@
+/*
+ * Icons
+ */
+.icon-plus {
+  background: _palette(accent);
+  border-radius: 50%;
+  color: #fff;
+  height: 24px;
+  position: relative;
+  width: 24px;
+
+  &:before,
+  &:after {
+    background: currentColor;
+    border-radius: 1px;
+    content: "";
+    height: 2px;
+    left: 50%;
+    margin-top: -1px;
+    margin-left: -8px;
+    position: absolute;
+    top: 50%;
+    width: 16px;
+  }
+
+  &:after {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+  }
+}
+
+.icon-close {
+  background: 0;
+  border-radius: 1px;
+  color: _palette(accent);
+  height: 2px;
+  margin-top: -1px;
+  margin-left: -12px;
+  left: 50%;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 24px;
+
+  &:before,
+  &:after {
+    background: currentColor;
+    border-radius: 1px;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+
+  &:before {
+    top: 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    top: 0;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+}

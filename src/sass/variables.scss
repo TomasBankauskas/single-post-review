@@ -1,0 +1,32 @@
+// Font.
+$font: (
+  primary: (
+    Rubik,
+    Helvetica,
+    Arial,
+    sans-serif
+  )
+);
+
+// Palette.
+$palette: (
+  primary: rgba(39, 43, 52, 0.8),
+  secondary: #031e34,
+  tertiary: #d9ecfc,
+  accent: #207bea,
+  accent-shade-1: #dcecff,
+  accent-shade-2: #4498ff,
+  accent-shade-3: #034da7,
+  bg1: #f5f5f5,
+  bg2: #e3e3e3,
+  gradient1: #031e34,
+  gradient2: #2b3d9f,
+  gradient3: #4f58fd,
+  gradient4: #149bf3,
+  gradient5: #6a11cb,
+  inactive: #aaaaaa,
+  notice: #20c778,
+  alert: #f04842
+);
+
+$breakpoint-mobile-menu: 1024px;

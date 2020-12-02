@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>icon-collapse</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Stackbit-Homepage-v13" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.8">
+        <g id="Try-Now-Hover" transform="translate(-678.000000, -389.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="Create-Website" transform="translate(239.000000, 197.000000)">
+                <g id="Create-a-Sample-Site" transform="translate(1.000000, 60.000000)">
+                    <g id="row" transform="translate(0.000000, 53.000000)">
+                        <g id="card-copy-6" transform="translate(263.000000, 0.000000)">
+                            <path d="M189.999884,79 C198.283848,79 205,85.7171372 205,94.0034762 C205,102.288425 198.283848,109 189.999884,109 C181.714761,109 175,102.288425 175,94.0034762 C175,85.7171372 181.714761,79 189.999884,79 Z M188.199202,100.834235 L195.588049,94.854944 C196.137515,94.4102403 196.137277,93.5835262 195.587573,93.1390562 L188.198964,87.1656132 C187.720712,86.7786906 187,87.1129786 187,87.7214345 L187,100.278647 C187,100.887103 187.72095,101.221391 188.199202,100.834235 Z" id="icon-collapse"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

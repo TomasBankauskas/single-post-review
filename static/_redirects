@@ -1,0 +1,39 @@
+# redirects
+/beta https://app.stackbit.com/create 301
+/syntaxfm /?utm_source=podcast_syntaxfm 301
+/shoptalk /?utm_source=podcast_shoptalk 301
+/developertea /?utm_source=podcast_developertea 301
+/devtea /?utm_source=podcast_devtea 301
+/modernweb /?utm_source=podcast_modernweb 301
+/codepen /?utm_source=podcast_codepen 301
+/techmeme /?utm_source=podcast_techmeme 301
+/demo https://demo.stackbit.com 302
+/live / 301
+
+# redirect to same url to fix caching issue
+/medium /medium
+
+# old/buggy links to /create rather than app.stackbit.com/create
+/create https://app.stackbit.com/create
+
+# Blog
+/blog/extending-jamestack-2020/                  /blog/extending-jamstack-2020/  301
+
+# Docs
+/docs/create-with-stackbit                       /docs/create-button
+/docs/uniform/*                                  /docs/site-builder/custom-themes
+/docs/unibit                                     /docs/site-builder/unibit
+/docs/using-stackbit/sharing-previews/           /docs/using-stackbit/sharing/
+/docs/ab-testing/a-b-testing/                    /docs/faq/a-b-testing/                      301!
+/docs/custom-themes/content-models/              /docs/stackbit-yaml/                        301!
+/docs/custom-themes/field-models/                /docs/stackbit-yaml/fields/                 301!
+/docs/custom-themes/object-models/               /docs/stackbit-yaml/object-models/          301!
+/docs/custom-themes/page-models/                 /docs/stackbit-yaml/page-models/            301!
+/docs/custom-themes/stackbit-yaml-base/          /docs/stackbit-yaml/                        301!
+/docs/custom-themes/stackbit-yaml-schema/        /docs/stackbit-yaml/                        301!
+/docs/custom-themes/stackbit-yaml-uniform/       /docs/custom-themes/                        301!
+/docs/custom-themes/stackbit-yaml/               /docs/stackbit-yaml/                        301!
+/docs/custom-themes/uniform-theme-requirements/  /docs/custom-themes/                        301!
+/docs/ab-testing/a-b-testing-analytics/          /docs/using-stackbit/a-b-testing-analytics/ 301!
+/docs/create-button/docs/                        /docs/custom-themes/create-button/          301!
+/docs/create-button/                             /docs/custom-themes/create-button/          301!

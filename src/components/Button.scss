@@ -1,0 +1,134 @@
+@import "../sass/variables";
+
+$button-size-padding: 30px;
+$button-size-padding-small: 25px;
+$cta-arrow-size: 24px;
+
+.button-component {
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 30px;
+  box-sizing: border-box;
+  display: inline-block;
+  font-weight: 500;
+  outline: 0;
+  padding: 13px $button-size-padding;
+  position: relative;
+  text-align: center;
+
+  > * {
+    vertical-align: middle;
+  }
+
+  @media (min-width: 768px) {
+    white-space: nowrap;
+  }
+}
+
+.button-component-disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.button-component-with-arrow {
+  padding-right: $button-size-padding + $cta-arrow-size;
+}
+
+.button-component-theme-accent {
+  background-color: map-get($palette, "accent");
+  border-color: map-get($palette, "accent");
+  color: white;
+
+  &:hover {
+    background-color: map-get($palette, "accent-shade-2");
+    border-color: map-get($palette, "accent-shade-2");
+    color: white;
+  }
+
+  &:focus {
+    background-color: map-get($palette, "accent-shade-3");
+    border-color: map-get($palette, "accent-shade-3");
+    color: white;
+  }
+
+  &.button-component-hollow {
+    background-color: transparent;
+    color: black;
+
+    &:hover {
+      background-color: map-get($palette, "accent");
+      color: white;
+    }
+
+    &:focus {
+      background-color: map-get($palette, "accent-shade-3");
+      color: white;
+    }
+  }
+}
+
+.button-component-theme-white {
+  background-color: white;
+  border-color: white;
+
+  &:not(.button-component-hollow) {
+    color: map-get($palette, "accent");
+
+    &:hover {
+      background-color: transparent;
+      color: currentColor;
+    }
+  }
+
+  &.button-component-hollow {
+    background-color: transparent;
+    color: white;
+
+    &:hover {
+      background-color: white;
+      color: map-get($palette, "accent");
+    }
+
+    &:focus {
+      background-color: map-get($palette, "accent-shade-1");
+      color: map-get($palette, "accent-shade-3");
+    }
+  }
+}
+
+.button-component-size-small {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  padding-left: $button-size-padding-small;
+  padding-right: $button-size-padding-small;
+
+  &.button-component-with-arrow {
+    padding-right: $button-size-padding-small + $cta-arrow-size;
+  }
+}
+
+.button-component-cta-arrow {
+  fill: currentColor;
+  height: $cta-arrow-size;
+  position: absolute;
+  right: 10px;
+  width: $cta-arrow-size;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.button-component-theme-accent {
+  &.button-component-hollow {
+    .button-component-cta-arrow {
+      fill: map-get($palette, "accent");
+    }
+
+    &:hover,
+    &:focus {
+      .button-component-cta-arrow {
+        fill: currentColor;
+      }
+    }
+  }
+}

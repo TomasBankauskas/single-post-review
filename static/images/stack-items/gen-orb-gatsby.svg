@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="258px" height="258px" viewBox="0 0 258 258" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>gatsby</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="96" cy="96" r="96"></circle>
+        <filter x="-29.2%" y="-24.0%" width="158.3%" height="158.3%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="10" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="17" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="gatsby" transform="translate(33.000000, 23.000000)">
+            <g id="Oval">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+            </g>
+            <g id="Gatsby_Monogram" transform="translate(33.000000, 33.000000)" fill-rule="nonzero">
+                <circle id="Oval" fill="#663399" cx="64.5" cy="64.5" r="64.5"></circle>
+                <g id="Group" transform="translate(13.821429, 13.821429)" fill="#FFFFFF">
+                    <path d="M14.7428571,86.6142857 C5.06785714,76.9392857 0,64.0392857 0,51.6 L50.2178571,101.357143 C37.3178571,100.896429 24.4178571,96.2892857 14.7428571,86.6142857 Z" id="Path"></path>
+                    <path d="M61.7357143,99.975 L1.38214286,39.6214286 C6.45,17.0464286 26.7214286,0 50.6785714,0 C67.725,0 82.4678571,8.29285714 91.6821429,20.7321429 L84.7714286,26.7214286 C76.9392857,16.125 64.5,9.21428571 50.6785714,9.21428571 C32.7107143,9.21428571 17.5071429,20.7321429 11.5178571,36.8571429 L64.5,89.8392857 C77.8607143,85.2321429 87.9964286,73.7142857 91.2214286,59.8928571 L69.1071429,59.8928571 L69.1071429,50.6785714 L101.357143,50.6785714 C101.357143,74.6357143 84.3107143,94.9071429 61.7357143,99.975 Z" id="Path"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

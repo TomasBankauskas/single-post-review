@@ -1,0 +1,8 @@
+title: Stackbit
+url: /
+logo_img: /images/logo.svg
+actions:
+    - has_arrow: true
+      label: Get Started
+      url: 'https://app.stackbit.com/create'
+      new_window: false

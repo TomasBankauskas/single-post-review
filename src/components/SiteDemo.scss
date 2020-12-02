@@ -1,0 +1,68 @@
+@import "../sass/variables";
+
+$site-demo-item-border-radius: 10px;
+
+.site-demo {
+  color: map-get($palette, "primary");
+  padding: 40px 18px;
+
+  @media (min-width: 960px) {
+    padding: 40px 58px;
+  }
+}
+
+.site-demo-title {
+  color: map-get($palette, "accent");
+  font-size: 40px;
+  margin-bottom: 13px;
+  padding: 0 8px;
+
+  @media (min-width: 960px) {
+    padding: 0 12px;
+  }
+}
+
+.site-demo-subtitle {
+  margin-bottom: 10px;
+  padding: 0 8px;
+
+  @media (min-width: 960px) {
+    padding: 0 12px;
+  }
+}
+
+.site-demo-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.site-demo-item {
+  box-sizing: border-box;
+  padding: 12px 8px;
+  text-decoration: none;
+  width: 100%;
+
+  @media (min-width: 480px) {
+    width: 50%;
+  }
+
+  @media (min-width: 960px) {//???
+    padding: 15px 12px;
+    width: 33.333%;
+  }
+}
+
+.site-demo-item-title {
+  margin: 10px 0 0;
+}
+
+.site-demo-item-wrapper {
+  border: 1px solid map-get($palette, "accent");
+  border-radius: $site-demo-item-border-radius;
+  display: block;
+}
+
+.site-demo-item-image {
+  border-radius: $site-demo-item-border-radius;
+}

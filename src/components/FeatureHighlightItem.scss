@@ -1,0 +1,79 @@
+@import "../sass/variables";
+
+.feature-highlight-item {
+  position: relative;
+
+  & + .feature-highlight-item {
+    margin-top: 40px;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    & + .feature-highlight-item {
+      margin-top: 60px;
+    }
+  }
+
+  &.feature-highlight-item-with-image {
+    text-align: left;
+
+    .feature-highlight-item-content {
+      @media (min-width: 768px) {
+        width: 50%;
+      }
+    }
+  }
+
+  &:not(.feature-highlight-item-with-image) {
+    @media (min-width: 768px) {
+      .feature-highlight-item-body {
+        column-count: 2;
+      }
+    }
+  }
+}
+
+.feature-highlight-item-title {
+  color: map-get($palette, "accent");
+  font-size: 40px;
+
+  .feature-highlight-theme-accent & {
+    color: map-get($palette, "bg1");
+  }
+}
+
+.feature-highlight-item-image-right {
+  .feature-highlight-item-image-wrapper {
+    order: 1;
+  }
+}
+
+.feature-highlight-item-image-wrapper {
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    width: 50%;
+  }
+}
+
+.feature-highlight-item-body {
+  text-align: left;
+}
+
+.feature-highlight-item-image {
+  width: 100%;
+}
+
+.feature-highlight-cta {
+  width: 100%;//???
+
+  @media (min-width: 768px) {
+    width: auto;
+  }
+}

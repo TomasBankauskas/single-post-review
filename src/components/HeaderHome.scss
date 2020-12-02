@@ -1,0 +1,257 @@
+@import "../sass/variables";
+
+.home-header-outside {
+  padding-bottom: 50px;
+  z-index: 10;
+}
+
+.home-header {
+  box-sizing: border-box;
+  z-index: 100;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.home-header-fixed {
+  padding-top: 60px;
+}
+
+.home-header-outside-mobile-logo {
+  background-color: map-get($palette, "accent");
+
+  .home-header-inside {
+    &:after {
+      display: none;
+    }
+  }
+
+  .home-header-controls {
+    background-color: map-get($palette, "accent");
+  }
+}
+
+.home-header-inside {
+  align-items: center;
+  background-color: map-get($palette, "accent");
+  box-sizing: border-box;
+  display: flex;
+  position: relative;
+  margin-bottom: 70px;
+  transform: translateY(-100%);
+  transition: transform 0.5s ease-in-out;
+
+  .home-header-fixed & {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  &:after {
+    content: " ";
+    background-color: map-get($palette, "accent");
+    display: block;
+    width: 100%;
+    height: 80px;
+    transform: skewY(4deg);
+    position: absolute;
+    bottom: -50px;
+    z-index: -1;
+  }
+
+  .home-header-menu {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  &.home-header-inside-expanded {
+    transform: none;
+  }
+
+  &.home-header-inside-sticky {
+    &:before {
+      transform: none;
+    }
+  }
+}
+
+.home-header-logo {
+  display: none;
+
+  transition: transform 0.15s ease-in-out;
+
+  .home-header-inside-fixed & {
+    opacity: 0;
+    transform: translateY(-40%);
+  }
+
+  .home-header-inside-fixed.home-header-inside-sticky & {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.home-header-logo-wrapper {
+  border: 0;
+
+  .home-header-outside-mobile-logo & {
+    // position: absolute;
+    // bottom: -45px;
+    // left: 20px;
+
+    .home-header-logo {
+      display: block;
+    }
+  }
+}
+
+.home-header-navigation {
+  color: white;
+  width: 100%;
+}
+
+.home-header-menu-item {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.28571;
+  margin: 40px 20px;
+  text-transform: uppercase;
+
+  &.current {
+    color: _palette(accent);
+  }
+
+  @media (max-width: 800px), (max-height: 600px) {
+    &.hide-on-mobile {
+      display: none;
+    }
+  }
+}
+
+.home-header-menu-item-link {
+  border-bottom: 1px solid transparent;
+  color: white;
+
+  &:hover {
+    border-color: currentColor;
+    color: white;
+  }
+
+  &:focus {
+    color: #dcecff;
+  }
+}
+
+@media (min-width: $breakpoint-mobile-menu) {
+  .home-header-outside {
+    padding-bottom: 0;
+  }
+
+  .home-header-static {
+    position: static;
+  }
+
+  .home-header-fixed {
+    position: static;
+    padding-top: 120px;
+  }
+
+  .home-header-logo {
+    display: block;
+  }
+
+  .home-header-inside {
+    margin-bottom: 0;
+    padding: 30px 60px;
+    transform: none;
+
+    &.home-header-inside-fixed {
+      background: none;
+      position: fixed;
+    }
+
+    &:before {
+      content: " ";
+      background-color: map-get($palette, "accent");
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      transform: translateY(-100%);
+      transition: transform 0.08s ease-out;
+    }
+
+    &:after {
+      display: none;
+    }
+  }
+
+  .home-header-menu {
+    width: auto;
+  }
+
+  .home-header-menu-item {
+    display: inline-block;
+    margin: 0 0 0 20px;
+  }
+
+  .home-header-navigation {
+    margin-left: auto;
+    width: auto;
+  }
+
+  .home-header-menu-toggle {
+    display: none;
+  }
+}
+
+.home-header-controls {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  left: 0;
+  padding: 20px;
+  position: absolute;
+  bottom: -64px;
+  box-sizing: border-box;
+
+  @media (min-width: $breakpoint-mobile-menu) {
+    padding: 0;
+    position: static;
+    width: auto;
+  }
+}
+
+.home-header-menu-toggle {
+  border: 0;
+  background: none;
+  outline: 0;
+  padding: 0;
+  margin-right: 5px;
+
+  .home-header-menu-icon-collapsed {
+    display: block;
+  }
+
+  .home-header-menu-icon-expanded {
+    display: none;
+  }
+}
+
+.home-header-inside-expanded {
+  .home-header-menu-icon-collapsed {
+    display: none;
+  }
+
+  .home-header-menu-icon-expanded {
+    display: block;
+  }
+}

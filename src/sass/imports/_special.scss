@@ -1,0 +1,67 @@
+/*
+ * Special pages
+ */
+.template-special {
+  .site-content {
+    background: _palette(accent);
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: relative;
+
+    .inner {
+      max-width: 750px;
+      padding-bottom: 5em;
+      padding-top: 5em;
+      position: relative;
+      text-align: center;
+    }
+
+    .page-img {
+      margin: 0 auto 2.5em;
+    }
+
+    .page-title {
+      font-size: 2rem;
+      margin: 0 0 1rem;
+    }
+
+    @media only screen and (min-width: 481px) {
+      .page-img {
+        margin-bottom: 3.33333em;
+      }
+
+      .page-title {
+        font-size: 2.33333rem;
+      }
+  
+      .page-description {
+        font-size: 1.33333rem;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong {
+      color: inherit;
+    }
+
+    a {
+      &:hover,
+      &:focus {
+        color: #fff;
+      }
+    }
+  }
+}

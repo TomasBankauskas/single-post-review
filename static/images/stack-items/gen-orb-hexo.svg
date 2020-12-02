@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="220px" height="220px" viewBox="0 0 220 220" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>hexo</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="77" cy="77" r="77"></circle>
+        <filter x="-36.4%" y="-29.9%" width="172.7%" height="172.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="10" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="17" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="hexo" transform="translate(33.000000, 23.000000)">
+            <g id="Oval">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+            </g>
+            <g id="hexo-logo-svg-vector" transform="translate(28.000000, 20.000000)" fill-rule="nonzero">
+                <polygon id="Path" fill="#0E83CD" points="49.0153125 0 0.219734375 28.2568949 0.225859375 84.6844983 49.1316875 112.825329 97.9265 84.5680508 97.9272656 28.1714746 49.0149297 0"></polygon>
+                <polygon id="Path" fill="#FFFFFF" points="26.1238906 80.8432644 26.1277188 56.4429254 26.1315469 32.0418203 30.5618359 29.4493322 34.8053125 31.9621458 34.85125 41.9329593 34.8971875 51.9041559 63.2536406 51.9041559 63.2995781 41.9398542 63.3455156 31.9751695 67.6548359 29.4834237 72.0234922 32.0422034 72.0211953 56.4264542 72.0192812 80.8110881 67.6942656 83.228139 63.3451328 80.779678 63.2991953 70.8644068 63.2532578 60.9487525 34.8971875 60.9487525 34.85125 70.8613424 34.8642656 80.8237288 30.5155156 83.3759966 26.1246563 80.8432644"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

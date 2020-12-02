@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="725px" height="617px" viewBox="0 0 725 617" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.1 (89650) - https://sketch.com -->
+    <title>Browser Window Silhouette</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-5.5%" y="-8.7%" width="110.9%" height="117.3%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="7" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.117915771   0 0 0 0 0.419333319   0 0 0 0 0.614215353  0 0 0 0.15 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <linearGradient x1="70.2719013%" y1="46.358634%" x2="99.1349924%" y2="30.6356211%" id="linearGradient-2">
+            <stop stop-color="#74838F" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#96A4AF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="90.7519165%" y1="49.86995%" x2="63.5409352%" y2="51.4203377%" id="linearGradient-3">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Browser-Window-Silhouette" transform="translate(-275.000000, 0.000000)">
+            <g filter="url(#filter-1)" transform="translate(-2.000000, 2.000000)">
+                <path d="M21,-1 L979,-1 C991.150264,-1 1001,8.8497355 1001,21 L1001,609 C1001,621.150264 991.150264,631 979,631 L21,631 C8.8497355,631 -1,621.150264 -1,609 L-1,21 C-1,8.8497355 8.8497355,-1 21,-1 Z" id="Border" stroke="url(#linearGradient-2)" stroke-width="2"></path>
+                <path d="M979,0 C990.59798,-2.13051432e-15 1000,9.40202025 1000,21 L1000,51 L0,51 L0,21 C-1.42034288e-15,9.40202025 9.40202025,2.13051432e-15 21,0 L979,0 Z" id="Tab-Bar" fill="url(#linearGradient-3)" opacity="0.3"></path>
+                <circle id="Oval" fill="#74838F" opacity="0.313802083" cx="933" cy="27" r="7"></circle>
+                <circle id="Oval" fill="#74838F" opacity="0.313802083" cx="953" cy="27" r="7"></circle>
+                <circle id="Oval" fill="#74838F" opacity="0.313802083" cx="973" cy="27" r="7"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

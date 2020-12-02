@@ -1,0 +1,129 @@
+@import "../sass/variables";
+
+$breakpoint-layout-shift: 960px;
+$service-icon-margin: 10px;
+
+.product-hero {
+  color: map-get($palette, "primary");
+  padding: 0 10px 40px 10px;
+  text-align: left;
+
+  @media (min-width: $breakpoint-layout-shift) {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (min-width: 768px) {
+    padding: 30px 62px 60px 62px;
+  }
+}
+
+.product-hero-content {
+  min-width: 320px;
+  flex: 1;
+  font-size: 24px;
+  line-height: 1.2;
+  padding: 60px 16px;
+
+  @media (min-width: $breakpoint-mobile-menu) {
+    background-image: url("/images/bg-triangle.svg"), none;
+    background-repeat: no-repeat;
+    background-position: left 10px bottom 30px, right 5px top 60px;
+    background-size: 250px, 150px;
+    margin-right: 50%;
+    padding-top: 50px;
+
+    .product-hero:not(.product-hero-with-logo) & {
+      padding-top: 0;
+    }
+  }
+
+  @media (min-width: $breakpoint-layout-shift) {
+    background-image: url("/images/bg-triangle.svg"), url("/images/bg-triangle.svg");
+    margin-right: 0;
+    padding-right: 20px;
+  }
+}
+
+.product-hero-tagline {
+  line-height: 1.3;
+  margin-bottom: 29px;
+}
+
+.product-hero-media-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  max-width: 648px;
+  min-width: 50%;
+  position: relative;
+  text-align: center;
+
+  @media (min-width: $breakpoint-layout-shift) {
+    text-align: left;
+  }
+}
+
+.product-hero-media {
+  border-radius: 4px;
+  height: auto;
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.3);
+}
+
+.product-hero-media-secondary {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.product-hero-logo {
+  border: 0;
+}
+
+.product-hero-logo-image {
+  display: block;
+  height: 29px;
+}
+
+.product-hero-title {
+  color: map-get($palette, "accent");
+  font-weight: 500;
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.product-hero-services {
+  margin-left: -$service-icon-margin;
+}
+
+.product-hero-service {
+  margin: 3px $service-icon-margin;
+}
+
+.product-hero-services-title {
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin: 0;
+  opacity: 0.6;
+  text-transform: uppercase;
+}
+
+.product-hero-services-etc {
+  font-size: 12px;
+  margin-left: $service-icon-margin;
+  opacity: 0.6;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+@media (min-width: 1170px) {
+  .product-hero-content {
+    margin-right: 0;
+  }
+
+  .product-hero-media-wrapper {
+    margin-left: 20px;
+    margin-top: 0;
+  }
+}

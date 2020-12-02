@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="341px" height="288px" viewBox="0 0 341 288" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Path 4</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M268.322878,22.6008656 C179.78145,-7.20531937 51.6341202,-17.244696 68.3766148,54.3003402 C85.1191095,125.845376 -34.7099217,157.467637 10.0973429,196.201316 C54.9046075,234.934994 131.428363,182.701203 191.409065,235.560429 C251.389767,288.419654 281.718992,311.423277 317.267229,252.615478 C352.815467,193.807679 356.864306,52.4070506 268.322878,22.6008656 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="art" transform="translate(0.000000, -57.000000)">
+            <g id="themes-bg1" transform="translate(0.000000, 57.400000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Path-4" fill="#3EB2FD" opacity="0.5" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

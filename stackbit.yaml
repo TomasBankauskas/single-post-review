@@ -1,0 +1,1845 @@
+stackbitVersion: ~0.3.3
+ssgName: gatsby
+ssgVersion: 0.1.12
+buildCommand: ./ssg-build.sh
+publishDir: public
+staticDir: static
+uploadDir: images
+dataDir: src/data
+pagesDir: src/pages
+pageLayoutKey: template
+noEncodeFields:
+    - config.siteUrl
+models:
+    config:
+        type: config
+        label: Global Site Config
+        fields:
+            - type: string
+              name: title
+              label: Title
+              description: Site title
+              required: true
+            - type: url
+              name: siteUrl
+              label: Site URL
+              description: 'The site domain URL without a trailing slash, used for meta tags.'
+            - type: string
+              name: meta_desc
+              label: Meta Description
+              description: The default description used for meta tags.
+            - type: image
+              name: meta_img
+              label: Meta Image
+              description: The default image used for meta tags.
+            - type: string
+              name: analytics_key
+              label: Analytics Key
+              description: The key for tracking analytics and the intercom widget.
+              required: true
+    header:
+        type: data
+        file: header.yml
+        label: Header
+        fields:
+            - type: string
+              name: title
+              label: Header Title
+              description: The title displayed in the header.
+              required: true
+            - type: image
+              name: logo_img
+              label: Logo Image
+              description: The logo image displayed in the header.
+            - type: string
+              name: url
+              label: Header Title/Logo URL
+              description: The url of the header title/logo.
+            - type: list
+              name: actions
+              label: Header Action Buttons
+              description: The action buttons displayed in the page header
+              items:
+                  type: model
+                  models: [action]
+    footer:
+        type: data
+        file: footer.yml
+        label: Footer
+        fields:
+            - type: boolean
+              name: cta_enabled
+              label: Show CTA Section
+              default: true
+            - type: string
+              name: cta_title
+              label: CTA Section Title
+              description: The title of the CTA section
+            - type: list
+              name: cta_actions
+              label: CTA Section Action Buttons
+              items:
+                  type: model
+                  models: [action]
+            - type: image
+              name: logo_img
+              label: Logo Image
+              description: The logo image displayed in the footer.
+            - type: list
+              name: link_groups
+              label: Links Group
+              description: A group of links to display in the footer.
+              items:
+                  type: object
+                  labelField: title
+                  fields:
+                      - type: string
+                        name: title
+                        label: Group Title
+                      - type: list
+                        name: links
+                        label: Group Links
+                        items:
+                            type: object
+                            labelField: title
+                            fields:
+                                - type: string
+                                  name: title
+                                  label: Title
+                                - type: string
+                                  name: url
+                                  label: URL
+                                  widget: url
+            - type: list
+              name: social_links
+              label: Social Links
+              description: A list of social links to display in the footer.
+              items:
+                  type: object
+                  labelField: title
+                  fields:
+                      - type: string
+                        name: title
+                        label: Title
+                      - type: string
+                        name: icon
+                        label: Icon
+                        description: Icon name
+                      - type: string
+                        name: url
+                        label: URL
+                        widget: url
+            - type: string
+              name: copyright
+              label: Copyright Text
+              description: The copyright text displayed in the footer.
+    staff_member:
+        type: data
+        label: Staff Member
+        folder: staff
+        fields:
+            - type: string
+              name: name
+              label: Name
+            - type: string
+              name: full_name
+              label: Full Name
+            - type: string
+              name: position
+              label: Position
+            - type: image
+              name: avatar
+              label: Avatar
+    author:
+        type: data
+        folder: authors
+        label: Author
+        fields:
+            - type: string
+              name: name
+              label: Name
+            - type: string
+              name: full_name
+              label: Full Name
+            - type: image
+              name: avatar
+              label: Avatar
+    theme_showcase_item:
+        type: data
+        folder: theme_list
+        label: Theme Showcase Item
+        fields:
+            - type: string
+              name: id
+              label: Theme ID
+              required: true
+            - type: string
+              name: title
+              label: Theme name
+              required: true
+            - type: string
+              name: description
+              label: Theme description
+            - type: image
+              name: image
+              label: Theme screenshot
+            - type: string
+              name: link
+              label: Link
+              description: The link to the theme single page, e.g. "themes/starter"
+            - type: string
+              name: create_url
+              label: Theme create URL
+            - type: string
+              name: preview_url
+              label: Theme preview URL
+    blog:
+        type: page
+        label: Blog
+        template: blog
+        file: blog/index.md
+        hideContent: true
+        singleInstance: true
+        fields:
+            - type: string
+              name: title
+              label: Title
+              description: The title of the page.
+              required: true
+            - type: string
+              name: meta_title
+              label: Meta Title
+              description: The meta title of the page
+            - type: string
+              name: meta_description
+              label: Meta Description
+              description: The meta description of the page
+            - type: markdown
+              name: subtitle
+              label: Subtitle
+              description: The text shown just below the page title.
+            - type: string
+              name: excerpt
+              label: Excerpt
+              description: The excerpt of the page displayed in the meta tags.
+            - type: page_menus
+              name: menus
+              label: Blog Menus
+              description: Which menus should this page show up in
+            - type: string
+              name: template
+              const: blog
+    page:
+        type: page
+        label: Page
+        template: page
+        exclude: 
+            - blog/**
+            - themes/**
+        fields:
+            - type: string
+              name: title
+              label: Title
+              description: The title of the page.
+              required: true
+            - type: string
+              name: meta_title
+              label: Meta Title
+              description: The meta title of the page
+            - type: string
+              name: meta_description
+              label: Meta Description
+              description: The meta description of the page
+            - type: markdown
+              name: subtitle
+              label: Subtitle
+              description: The text shown just below the page title.
+            - type: string
+              name: excerpt
+              label: Excerpt
+              description: The excerpt of the page displayed in the meta tags.
+            - type: list
+              name: scripts
+            - type: page_menus
+              name: menus
+              label: Page Menus
+              description: Which menus should this page show up in
+            - type: string
+              name: template
+              const: page
+    post:
+        type: page
+        urlPath: "/blog/{slug}"
+        label: Post
+        template: post
+        folder: blog
+        exclude: index.md
+        fields:
+            - type: string
+              name: title
+              label: Title
+              description: The title of the post.
+              required: true
+            - type: string
+              name: meta_title
+              label: Meta Title
+              description: The meta title of the page
+            - type: string
+              name: meta_description
+              label: Meta Description
+              description: The meta description of the page
+            - type: markdown
+              name: subtitle
+              label: Subtitle
+              description: The subtitle of the post.
+            - type: date
+              name: date
+              label: Date
+              required: true
+            - type: reference
+              name: author
+              label: Author
+              description: The author of the post.
+              models:
+                  - staff_member
+                  - author
+            - type: image
+              name: thumb_img_path
+              label: Featured Image
+              description: The image shown in the blog feed.
+            - type: image
+              name: content_img_path
+              label: Alt Featured Image
+              description: The image shown on the single post page.
+            - type: string
+              name: excerpt
+              label: Excerpt
+              description: >-
+                  The excerpt of the post displayed in the blog feed and in the meta
+                  tags.
+            - type: list
+              name: scripts
+            - type: page_menus
+              name: menus
+              label: Post Menus
+              description: Which menus should this page show up in
+            - type: string
+              name: template
+              const: post
+    theme:
+        type: page
+        urlPath: "/themes/{slug}"
+        label: Theme
+        template: theme
+        folder: themes
+        exclude: index.md
+        fields:
+            - type: string
+              name: title
+              label: Title
+              description: The title of the theme.
+              required: true
+            - type: boolean
+              name: show_header
+              label: Show header section?
+              default: true
+            - type: boolean
+              name: show_footer_cta
+              label: Show footer CTA section?
+              default: true
+            - type: string
+              name: meta_title
+              label: Meta Title
+              description: The meta title of the theme
+            - type: string
+              name: meta_description
+              label: Meta Description
+              description: The meta description of the theme
+            - type: list
+              name: sections
+              label: Sections
+              description: Page sections
+              items:
+                  type: model
+                  labelField: title
+                  models:
+                      - text
+                      - textimage
+                      - cta
+                      - theme_hero_section
+                      - theme_showcase_section
+                      - site_demo_section
+                      - feature_highlight_section
+                      - feature_highlight_combo_section
+                      - hero_image_section
+    contact:
+        type: page
+        label: Contact
+        template: contact
+        file: contact.md
+        singleInstance: true
+        fields:
+            - type: string
+              name: title
+              label: Title
+              description: The title of the page.
+              required: true
+            - type: boolean
+              name: show_footer_cta
+              label: Show footer CTA section?
+              default: true
+            - type: string
+              name: meta_title
+              label: Meta Title
+              description: The meta title of the page
+            - type: string
+              name: meta_description
+              label: Meta Description
+              description: The meta description of the page
+            - type: markdown
+              name: subtitle
+              label: Subtitle
+              description: The text shown just below the page title.
+            - type: string
+              name: excerpt
+              label: Excerpt
+              description: The excerpt of the page displayed in the meta tags.
+            - type: boolean
+              name: form_enabled
+              label: Show Form
+              default: true
+            - type: string
+              name: form_action
+              label: Form Action
+              description: The value of the form action attribute.
+            - type: string
+              name: form_submit_text
+              label: Form Submit Text
+              description: The text displayed inside the submit button.
+            - type: list
+              name: form_fields
+              label: Form Fields
+              description: Form fields of the contact form displayed below the page content.
+              items:
+                  type: model
+                  labelField: label
+                  models:
+                      - inputfield
+                      - selectfield
+                      - textareafield
+            - type: page_menus
+              name: menus
+              label: Contact Menus
+              description: Which menus should this page show up in
+            - type: string
+              name: template
+              const: contact
+    custom:
+        type: page
+        label: Custom Page
+        template: custom
+        hideContent: true
+        fields:
+            - type: string
+              name: title
+              label: Title
+              description: The title of the page.
+            - type: boolean
+              name: show_header
+              label: Show header section?
+              default: true
+            - type: boolean
+              name: show_footer_cta
+              label: Show footer CTA section?
+              default: true
+            - type: string
+              name: meta_title
+              label: Meta Title
+              description: The meta title of the page
+            - type: string
+              name: meta_description
+              label: Meta Description
+              description: The meta description of the page
+              required: true
+            - type: markdown
+              name: subtitle
+              label: Subtitle
+              description: The text shown just below the page title.
+            - type: string
+              name: excerpt
+              label: Excerpt
+              description: The excerpt of the page displayed in the meta tags.
+            - type: list
+              name: sections
+              label: Sections
+              description: Page sections.
+              items:
+                  type: model
+                  labelField: title
+                  models:
+                      - investors
+                      - reviews
+                      - team
+                      - text
+                      - textimage
+                      - cta
+                      - faq
+                      - product_hero_section
+                      - theme_showcase_section
+                      - feature_highlight_section
+                      - cta_block_section
+                      - if_then_section
+                      - feature_highlight_combo_section
+                      - hero_image_section
+            - type: list
+              name: scripts
+            - type: page_menus
+              name: menus
+              label: Custom Page Menus
+              description: Which menus should this page show up in
+            - type: string
+              name: template
+              const: custom
+    landing:
+        type: page
+        label: Landing Page
+        template: landing
+        hideContent: true
+        fields:
+            - type: string
+              name: title
+              label: Title
+              description: The title of the page.
+              required: true
+            - type: string
+              name: meta_title
+              label: Meta Title
+              description: The meta title of the page
+            - type: string
+              name: meta_description
+              label: Meta Description
+              description: The meta description of the page
+            - type: markdown
+              name: subtitle
+              label: Subtitle
+              description: The text shown just below the page title.
+            - type: string
+              name: excerpt
+              label: Excerpt
+              description: The excerpt of the page displayed in the meta tags.
+            - type: list
+              name: actions
+              label: Action Buttons
+              description: Action buttons displayed in the page header.
+              items:
+                  type: model
+                  models: [action]
+            - type: list
+              name: sections
+              label: Sections
+              description: Page sections.
+              items:
+                  type: model
+                  labelField: title
+                  models:
+                      - cta
+                      - faq
+                      - reviews
+                      - text
+                      - textimage
+                      - grid
+                      - netlifyimporter
+                      - stackbitdemo
+            - type: boolean
+              name: hide_nav_bar
+              label: Hide Header Navigation Bar?
+              default: false
+            - type: list
+              name: scripts
+            - type: page_menus
+              name: menus
+              label: Landing Page Menus
+              description: Which menus should this page show up in
+            - type: string
+              name: template
+              const: landing
+    special:
+        type: page
+        label: Special Page
+        template: special
+        hideContent: true
+        fields:
+            - type: string
+              name: title
+              label: Title
+              description: The title of the page.
+              required: true
+            - type: string
+              name: meta_title
+              label: Meta Title
+              description: The meta title of the page
+            - type: string
+              name: meta_description
+              label: Meta Description
+              description: The meta description of the page
+            - type: markdown
+              name: subtitle
+              label: Subtitle
+              description: The text shown below the page title.
+            - type: image
+              name: content_img_path
+              label: Image
+              description: The image shown above the title.
+            - type: list
+              name: actions
+              label: Action Buttons
+              description: Action buttons shown below the page subtitle.
+              items:
+                  type: model
+                  models: [action]
+            - type: list
+              name: scripts
+            - type: page_menus
+              name: menus
+              label: Special Page Menus
+              description: Which menus should this page show up in
+            - type: string
+              name: template
+              const: special
+    action_page:
+        type: page
+        label: Action Page
+        template: action-page
+        hideContent: true
+        fields:
+            - type: string
+              name: title
+              label: Title
+              description: The title of the page.
+              required: true
+            - type: boolean
+              name: show_footer_cta
+              label: Show footer CTA section?
+              default: true
+            - type: string
+              name: meta_title
+              label: Meta Title
+              description: The meta title of the page
+            - type: string
+              name: meta_description
+              label: Meta Description
+              description: The meta description of the page
+            - type: string
+              name: template
+              const: action-page
+    home:
+        type: page
+        label: Homepage
+        template: home
+        hideContent: true
+        fields:
+            - type: string
+              name: title
+              label: Title
+              description: The title of the page.
+              required: true
+            - type: string
+              name: meta_title
+              label: Meta Title
+              description: The meta title of the page
+            - type: string
+              name: meta_description
+              label: Meta Description
+              description: The meta description of the page
+            - type: list
+              name: actions
+              label: Action Buttons
+              description: Action buttons displayed in the page header.
+              items:
+                  type: model
+                  models: [action]
+            - type: list
+              name: sections
+              label: Sections
+              description: Page sections.
+              items:
+                  type: model
+                  labelField: title
+                  models:
+                      - product_hero_section
+                      - theme_showcase_section
+                      - feature_highlight_section
+            - type: list
+              name: scripts
+            - type: page_menus
+              name: menus
+              label: Landing Page Menus
+              description: Which menus should this page show up in
+            - type: string
+              name: template
+              const: home
+    section:
+        type: object
+        label: Section
+        labelField: title
+        fields:
+            - type: string
+              name: title
+              label: Title
+              description: The title of the section.
+            - type: string
+              name: section_id
+              label: ID
+              description: The ID of the section.
+            - type: string
+              name: component
+              label: Component
+              required: true
+              hidden: true
+    product_hero_section:
+        type: object
+        label: Product Hero Section
+        extends:
+            - section
+        fields:
+            - name: component
+              const: ProductHero
+            - type: string
+              name: strapline
+              label: Strapline
+              description: The product strapline
+            - type: string
+              name: description
+              label: Description
+              description: The product description
+            - type: image
+              name: logo
+              label: Logo
+              description: The image to show above the strapline
+            - type: string
+              name: video_url
+              label: Video URL
+              description: The relative URL to the video file
+            - type: image
+              name: video_fallback
+              label: Video Fallback Image
+              description: The image to show when the video is not available
+    theme_hero_section:
+        type: object
+        label: Theme Hero Section
+        extends:
+            - section
+        fields:
+            - name: component
+              const: ThemeHero
+            - type: string
+              name: title
+              label: Title
+              description: The theme title
+            - type: string
+              name: description
+              label: Description
+              description: The theme description
+            - type: image
+              name: img_url
+              label: Image
+              description: The preview image of the theme
+            - type: string
+              name: img_alt
+              label: Image Alt Text
+              description: The alt text of the image
+            - type: list
+              name: actions
+              label: Action buttons
+              items:
+                type: model
+                models:
+                  - action
+            - type: enum
+              name: bg_color
+              label: Background
+              options:
+                  - none
+                  - light
+              default: none
+    theme_showcase_section:
+        type: object
+        label: Theme Showcase Section
+        extends:
+            - section
+        fields:
+            - name: component
+              const: ThemeShowcase
+            - type: string
+              name: title
+              label: Title
+              description: Section title
+            - type: string
+              name: body
+              label: Body
+              description: Section body
+            - type: list
+              name: actions
+              label: Action buttons
+              items:
+                type: model
+                models: [action]
+            - type: list
+              name: themes
+              label: Themes
+              items:
+                  type: reference
+                  models: [theme_showcase_item]
+            - type: enum
+              name: bg_color
+              label: Background
+              options:
+                  - none
+                  - light
+                  - blue
+              default: none
+    feature_highlight_section:
+        type: object
+        label: Feature Highlight Section
+        extends:
+            - section
+        fields:
+            - name: component
+              const: FeatureHighlight
+            - type: string
+              name: title
+              label: Title
+              description: Section title
+            - type: markdown
+              name: body
+              label: Body
+              description: Section body
+            - type: list
+              name: items
+              label: Items
+              description: Feature highlight items
+              items:
+                  type: model
+                  labelField: title
+                  models: [feature_highlight_item]
+            - type: enum
+              name: bg_color
+              label: Background
+              options:
+                  - none
+                  - light
+                  - blue
+              default: none
+    feature_highlight_item:
+        type: object
+        label: Feature Highlight Item
+        fields:
+            - type: string
+              name: item_id
+              label: ID
+              description: The ID of the item
+            - type: string
+              name: title
+              label: Title
+              description: The title of the item
+            - type: markdown
+              name: body
+              label: Body
+              description: The body of the item
+            - type: image
+              name: img_url
+              label: Image
+              description: The feature image of the item
+            - type: string
+              name: img_alt
+              label: Image Alt Text
+              description: The alt text of the image
+            - type: enum
+              name: img_position
+              label: Image Position
+              options:
+                  - left
+                  - right
+            - type: list
+              name: actions
+              label: Action buttons
+              items:
+                type: model
+                models: [action]
+    cta:
+        type: object
+        label: CTA Section
+        extends:
+            - section
+        fields:
+            - name: component
+              const: Cta
+            - type: string
+              name: body
+              label: Body
+              description: Section body
+            - type: list
+              name: actions
+              label: Action Buttons
+              items:
+                  type: model
+                  models: [action]
+            - type: enum
+              name: bg_color
+              label: Background
+              options:
+                  - none
+                  - light
+                  - blue
+              default: none
+    faq:
+        type: object
+        label: FAQ Section
+        extends:
+            - section
+        fields:
+            - name: component
+              const: Faq
+            - type: markdown
+              name: content_above
+              label: Content Above
+              description: The text content of the section displayed above the FAQ items.
+            - type: markdown
+              name: content_below
+              label: Content Below
+              description: The text content of the section displayed below the FAQ items.
+            - type: list
+              name: faq_items
+              label: FAQ Items
+              items:
+                  type: object
+                  labelField: question
+                  fields:
+                      - type: string
+                        name: question
+                        label: Question
+                      - type: markdown
+                        name: answer
+                        label: Answer
+            - type: enum
+              name: bg_color
+              label: Background
+              options:
+                  - none
+                  - light
+              default: none
+    investors:
+        type: object
+        label: Investors Section
+        extends:
+            - section
+        fields:
+            - name: component
+              const: Investors
+            - type: list
+              name: vc_investors
+              label: VC Investors
+              items:
+                  type: object
+                  labelField: title
+                  fields:
+                      - type: string
+                        name: title
+                        label: Title
+                        description: The title of the investor.
+                      - type: image
+                        name: logo_img
+                        label: Logo
+                        description: The logo image of the investor.
+                      - type: string
+                        name: url
+                        label: URL
+                        description: The url of the investor.
+            - type: string
+              name: angels_title
+              label: Angels Title
+              description: The title displayed before the angel investors list.
+            - type: list
+              name: angel_investors
+              label: Angel Investors
+              items:
+                  type: object
+                  labelField: title
+                  fields:
+                      - type: string
+                        name: title
+                        label: Title
+                        description: The title of the investor.
+                      - type: string
+                        name: subtitle
+                        label: Subtitle
+                        description: The subtitle of the investor.
+                      - type: image
+                        name: avatar
+                        label: Avatar
+                        description: The avatar image of the investor.
+                      - type: string
+                        name: url
+                        label: URL
+                        description: The url of the investor.
+            - type: enum
+              name: bg_color
+              label: Background
+              options:
+                  - none
+                  - light
+                  - blue
+                  - purple
+              default: none
+            - type: enum
+              name: bg_pattern
+              label: Pattern
+              options:
+                  - none
+                  - triangles
+                  - squares
+                  - mixed
+              default: none
+    reviews:
+        type: object
+        label: Reviews Section
+        extends:
+            - section
+        fields:
+            - name: component
+              const: Reviews
+            - type: list
+              name: tweets
+              label: Tweets
+              items:
+                  type: tweet
+            - type: enum
+              name: bg_color
+              label: Background
+              options:
+                  - none
+                  - light
+                  - blue
+                  - purple
+              default: none
+            - type: enum
+              name: bg_pattern
+              label: Pattern
+              options:
+                  - none
+                  - triangles
+                  - squares
+                  - mixed
+              default: none
+    team:
+        type: object
+        label: Team Section
+        extends:
+            - section
+        fields:
+            - name: component
+              const: Team
+            - type: list
+              name: members
+              label: Team Members
+              items:
+                  type: object
+                  labelField: name
+                  fields:
+                      - type: string
+                        name: name
+                        label: Name
+                        description: The name of the team member.
+                      - type: string
+                        name: position
+                        label: Position
+                        description: The position of the team member.
+                      - type: image
+                        name: avatar
+                        label: Avatar
+                        description: The avatar image of the team member.
+            - type: boolean
+              name: new_member_enabled
+              label: Show New Team Member
+              default: true
+            - type: string
+              name: new_member_name
+              label: New Team Member Name
+              description: The title of the new team member.
+            - type: string
+              name: new_member_position
+              label: New Team Member Position
+              description: The position of the new team member.
+            - type: image
+              name: new_member_avatar
+              label: New Team Member Avatar
+              description: The avatar image of the new team member.
+            - type: string
+              name: new_member_url
+              label: New Team Member URL
+              description: The URL of the new team member.
+            - type: boolean
+              name: new_member_new_window
+              label: New Team Member Open in New Window?
+              default: false
+              description: Opens the link in a new window/tab.
+            - type: list
+              name: actions
+              label: Action Buttons
+              items:
+                  type: model
+                  models: [action]
+            - type: enum
+              name: bg_color
+              label: Background
+              options:
+                  - none
+                  - light
+                  - blue
+                  - purple
+              default: none
+            - type: enum
+              name: bg_pattern
+              label: Pattern
+              options:
+                  - none
+                  - triangles
+                  - squares
+                  - mixed
+              default: none
+    text:
+        type: object
+        label: Text Section
+        extends:
+            - section
+        fields:
+            - name: component
+              const: Text
+            - type: markdown
+              name: content
+              label: Content
+              description: The text content of the section.
+            - type: list
+              name: actions
+              label: Action Buttons
+              items:
+                  type: model
+                  models: [action]
+            - type: enum
+              name: bg_color
+              label: Background
+              options:
+                  - none
+                  - light
+                  - blue
+                  - purple
+              default: none
+            - type: enum
+              name: bg_pattern
+              label: Pattern
+              options:
+                  - none
+                  - triangles
+                  - squares
+                  - mixed
+              default: none
+    textimage:
+        type: object
+        label: Text Image/Video Section
+        extends:
+            - section
+        fields:
+            - name: component
+              const: TextImage
+            - type: markdown
+              name: content
+              label: Content
+              description: The text content of the section.
+            - type: image
+              name: image
+              label: Image
+              description: The image of the section.
+            - type: markdown
+              name: video_embed
+              label: Video
+              description: YouTube or Vimeo embed code. Displayed if no image added.
+            - type: enum
+              name: img_position
+              label: Image/Video Position
+              options:
+                  - center
+                  - left
+                  - right
+              default: center
+            - type: list
+              name: actions
+              label: Action Buttons
+              items:
+                  type: model
+                  models: [action]
+            - type: enum
+              name: bg_color
+              label: Background
+              options:
+                  - none
+                  - light
+                  - blue
+                  - purple
+              default: none
+            - type: enum
+              name: bg_pattern
+              label: Pattern
+              options:
+                  - none
+                  - triangles
+                  - squares
+                  - mixed
+              default: none
+    grid:
+        type: object
+        label: Grid Section
+        extends:
+            - section
+        fields:
+            - name: component
+              const: Grid
+            - type: markdown
+              name: content
+              label: Content
+              description: The text content of the section.
+            - type: enum
+              name: col_number
+              label: Grid Columns
+              options:
+                  - two
+                  - three
+              default: two
+            - type: list
+              name: items
+              label: Grid Items
+              items:
+                  type: object
+                  labelField: title
+                  fields:
+                      - type: string
+                        name: title
+                        label: Title
+                        description: The title of the grid item.
+                      - type: markdown
+                        name: content
+                        label: Content
+                        description: The content of the grid item.
+            - type: list
+              name: actions
+              label: Action Buttons
+              items:
+                  type: model
+                  models: [action]
+            - type: enum
+              name: bg_color
+              label: Background
+              options:
+                  - none
+                  - blue
+                  - purple
+                  - light
+              default: none
+            - type: enum
+              name: bg_pattern
+              label: Pattern
+              options:
+                  - none
+                  - triangles
+                  - squares
+                  - mixed
+              default: none
+    latestposts:
+        type: object
+        label: Latest Posts Section
+        extends:
+            - section
+        fields:
+            - name: component
+              const: LatestPosts
+            - type: list
+              name: actions
+              label: Action Buttons
+              items:
+                  type: model
+                  models: [action]
+            - type: enum
+              name: bg_color
+              label: Background
+              options:
+                  - none
+                  - light
+              default: none
+    formfield:
+        type: object
+        label: Field
+        labelField: label
+        fields:
+            - type: string
+              name: name
+              label: Name
+              description: >-
+                  HTML "name" attribute. Keep this to letters and underscores (_), no
+                  spaces.
+              required: true
+            - type: string
+              name: label
+              label: Label
+              description: The label that appears above this field.
+              required: true
+            - type: string
+              name: component
+              label: Component
+              required: true
+              hidden: true
+    inputfield:
+        type: object
+        label: Input
+        extends:
+            - formfield
+        fields:
+            - name: component
+              const: InputField
+            - type: enum
+              name: input_type
+              label: Type
+              options:
+                  - text
+                  - email
+                  - url
+              default: text
+              required: true
+    selectfield:
+        type: object
+        label: Select
+        extends:
+            - formfield
+        fields:
+            - name: component
+              const: SelectField
+            - type: string
+              name: default_option
+              label: Default Option
+              description: The text displayed by default.
+            - type: list
+              name: options
+              label: options
+              items:
+                  type: object
+                  labelField: label
+                  fields:
+                      - type: string
+                        name: value
+                        label: Value
+                      - type: string
+                        name: label
+                        label: Label
+                        widget: url
+                        required: true
+    textareafield:
+        type: object
+        label: Textarea
+        extends:
+            - formfield
+        fields:
+            - name: component
+              const: TextareaField
+    tweet:
+        type: object
+        label: Tweet
+        labelField: name
+        fields:
+            - type: string
+              name: name
+              label: Name
+              description: The name of the tweet author.
+            - type: string
+              name: username
+              label: Username
+              description: The username of the tweet author.
+            - type: image
+              name: avatar
+              label: Avatar
+              description: The avatar of the tweet author.
+            - type: string
+              name: url
+              label: URL
+              description: The url of the tweet.
+            - type: markdown
+              name: text
+              label: Text
+              description: The text of the tweet.
+    netlifyimporter:
+        type: object
+        label: Netlify Importer Modal
+        extends:
+            - section
+        fields:
+            - name: component
+              const: NetlifyImporter
+    stackbitdemo:
+        type: object
+        label: Stackbit Demo
+        extends:
+            - section
+        fields:
+            - name: component
+              const: StackbitDemo
+    action:
+        type: object
+        label: Action
+        labelField: label
+        fields:
+            - type: string
+              name: label
+              label: Label
+              description: The text displayed inside the button.
+            - type: string
+              name: url
+              label: Button URL
+              widget: url
+            - type: enum
+              name: class_name
+              label: Button Type
+              options:
+                  - label: Default
+                    value: null
+                  - label: Google Sign In
+                    value: sign-google
+                  - label: Netlify Sign In
+                    value: sign-netlify
+            - type: boolean
+              name: is_hollow
+              label: Is hollow?
+              default: false
+              description: Gives the button a hollow style appearance
+            - type: boolean
+              name: has_arrow
+              label: Has Arrow?
+              default: false
+              description: Adds an arrow after the button label
+            - type: boolean
+              name: new_window
+              label: Open in new window?
+              default: false
+              description: Opens the link in a new window/tab
+    site_menus:
+        type: data
+        file: menus.json
+        label: Site Menus
+        description: >-
+            Site menus model, defines list of menus that can be specified from within
+            site configuration
+        fields:
+            - type: list
+              name: main
+              label: Main menu
+              description: List of items for Main menu
+              items:
+                  type: site_menu_item
+            - type: list
+              name: footer
+              label: Footer
+              description: List of items for Footer
+              items:
+                  type: site_menu_item
+            - type: list
+              name: footer_legal
+              label: Footer Legal
+              description: List of items for Footer Legal
+              items:
+                  type: site_menu_item
+            - type: list
+              name: main_alt
+              label: Main alternative
+              description: List of items for Main Menu alternativess
+              items:
+                  type: site_menu_item
+    site_menu_item:
+        type: object
+        label: Site Menu Item
+        labelField: title
+        description: 'Site menu item model, defines fields for a single site menu item'
+        fields:
+            - type: string
+              name: identifier
+              label: Identifier
+              description: >-
+                  The identifier of a menu item could be used as a parent menu of
+                  another menu item
+              required: true
+            - type: string
+              name: title
+              label: Title
+              description: The title of the menu item
+              required: true
+            - type: string
+              name: url
+              label: URL
+              description: The URL the menu item links to
+              required: true
+            - type: number
+              name: weight
+              label: Weight
+              description: Position for sorting
+    page_menus:
+        type: object
+        label: Page Menus
+        description: 'Page menus model, defines menus that can be specified from within pages'
+        fields:
+            - type: page_menu_item
+              name: main
+              label: Main menu item
+              description: Main menu item for this page
+    page_menu_item:
+        type: object
+        label: Page Menu Item
+        labelField: title
+        description: 'Page menu item model, defines fields for a single page menu item'
+        fields:
+            - type: string
+              name: title
+              label: Title
+              description: The title of the menu item
+            - type: number
+              name: weight
+              label: Weight
+              description: Position for sorting
+            - type: string
+              name: identifier
+              label: Identifier
+              description: >-
+                  The identifier of a menu item could be used as a parent menu of
+                  another menu item
+    medium:
+        type: page
+        label: Medium Importer
+        template: medium
+        file: medium.md
+        hideContent: true
+        singleInstance: true
+        fields:
+            - type: string
+              name: title
+              label: Title
+              description: The title of the page.
+              required: true
+            - type: string
+              name: meta_title
+              label: Meta Title
+              description: The meta title of the page
+            - type: string
+              name: meta_description
+              label: Meta Description
+              description: The meta description of the page
+            - type: string
+              name: subtitle
+              label: Subtitle
+              description: The text shown in the page header.
+            - type: markdown
+              name: description
+              label: Description
+              description: The text shown just below the subtitle.
+            - type: intercom_cta
+              name: contact
+              label: Contact
+              description: The contact information to be used with Intercom.
+            - type: markdown
+              name: features
+              label: Features
+              description: The text shown below the description.
+            - type: markdown
+              name: contact_text
+              label: Contact Text
+              description: The text of the contact section located at the bottom of the page header.
+            - type: fileimport
+              name: header_import_section
+              label: Header Importer
+              description: The file import section displayed in the page header.
+            - type: fileimport
+              name: footer_import_section
+              label: Footer Importer
+              description: The file import section displayed at the bottom of the page.
+            - type: list
+              name: sections
+              label: Sections
+              description: Page sections.
+              items:
+                  type: model
+                  labelField: title
+                  models:
+                      - cta
+                      - faq
+                      - reviews
+                      - text
+                      - textimage
+                      - grid
+            - type: list
+              name: scripts
+            - type: string
+              name: template
+              const: medium
+    intercom_cta:
+        type: object
+        label: Intercom CTA
+        labelField: cta_text
+        fields:
+            - type: markdown
+              name: content
+              label: Content
+              description: The content to be displayed next to the CTA.
+            - type: string
+              name: cta_text
+              label: CTA text
+              description: The CTA text.
+            - type: image
+              name: avatar
+              label: Avatar
+              description: The avatar shown next to the CTA.
+    fileimport:
+        type: object
+        label: Import Section
+        labelField: title
+        fields:
+            - type: string
+              name: title
+              label: Title
+              description: The title of the file import section.
+            - type: markdown
+              name: content
+              label: Content
+              description: The text displayed in the file import section.
+    cta_block_item:
+        type: object
+        label: CTAs Block Item
+        fields:
+            - type: string
+              name: title
+              label: Title
+              description: Section title
+            - type: string
+              name: body
+              label: Body
+              description: Section body
+            - type: string
+              name: ctaText
+              label: CTA text
+              description: The text for the CTA button
+            - type: string
+              name: ctaLink
+              label: CTA link
+              description: The link for the CTA button
+    cta_block_section:
+        type: object
+        label: CTAs Block Section
+        extends:
+            - section
+        fields:
+            - name: component
+              const: CtaBlock
+            - type: string
+              name: title
+              label: Title
+              description: Section title
+            - type: string
+              name: body
+              label: Body
+              description: Section body
+            - type: list
+              name: items
+              label: Items
+              description: CTA block items.
+              items:
+                  type: model
+                  labelField: title
+                  models:
+                      - cta_block_item
+            - type: enum
+              name: bg_color
+              label: Background
+              options:
+                  - none
+                  - light
+                  - blue
+              default: none
+    feature_highlight_combo_item:
+        type: object
+        label: Feature Highlight Combo Item
+        fields:
+            - type: image
+              name: img_url
+              label: Feature icon
+            - type: string
+              name: description
+              label: Feature description
+    feature_highlight_combo_section:
+        type: object
+        label: Feature Highlight Combo Section
+        extends:
+            - section
+        fields:
+            - name: component
+              const: CtaBlock
+            - type: string
+              name: title
+              label: Title
+              description: Section title
+            - type: string
+              name: body
+              label: Body
+              description: Section body
+            - type: string
+              name: ctaText
+              label: CTA text
+              description: The text for the CTA button
+            - type: string
+              name: ctaLink
+              label: CTA link
+              description: The link for the CTA button
+            - type: list
+              name: items
+              label: Items
+              description: CTA block items.
+              items:
+                  type: model
+                  labelField: title
+                  models:
+                      - feature_highlight_combo_item
+            - type: enum
+              name: bg_color
+              label: Background
+              options:
+                  - none
+                  - light
+                  - blue
+              default: none
+    if_then_item:
+        type: object
+        label: If-Then Item
+        fields:
+            - type: string
+              name: title
+              label: Title
+              description: Item title
+            - type: string
+              name: subtitle
+              label: Subtitle
+              description: Section subtitle
+            - type: markdown
+              name: body
+              label: Body
+              description: Section body
+    if_then_section:
+        type: object
+        label: If-Then Section
+        extends:
+            - section
+        fields:
+            - name: component
+              const: IfThen
+            - type: string
+              name: title
+              label: Title
+              description: Section title
+            - type: markdown
+              name: body
+              label: Body
+              description: Section body
+            - type: list
+              name: items
+              label: Items
+              description: CTA block items.
+              items:
+                  type: model
+                  labelField: title
+                  models:
+                      - if_then_item
+            - type: enum
+              name: bg_color
+              label: Background
+              options:
+                  - none
+                  - light
+                  - blue
+              default: none
+    hero_image_section:
+        type: object
+        label: Hero Image Section
+        extends:
+            - section
+        fields:
+            - name: component
+              const: HeroImage
+            - type: string
+              name: alt
+              label: Alt text
+              description: Alt text
+            - type: image
+              name: url
+              label: Image
+            - type: number
+              name: max_width
+              label: Maximum width
+            - type: enum
+              name: bg_color
+              label: Background
+              options:
+                  - none
+                  - light
+                  - blue
+              default: none
+    site_demo_section:
+        type: object
+        label: Site Demo Section
+        extends:
+            - section
+        fields:
+            - name: component
+              const: SiteDemo
+            - type: string
+              name: title
+              label: Title
+              description: Section title
+            - type: string
+              name: body
+              label: Body
+              description: Section body
+            - type: list
+              name: items
+              label: Items
+              description: Site demo items
+              items:
+                  type: model
+                  labelField: title
+                  models:
+                      - site_demo_item
+            - type: enum
+              name: bg_color
+              label: Background
+              options:
+                  - none
+                  - light
+                  - blue
+              default: none
+    site_demo_item:
+        type: object
+        label: Site Demo Item
+        fields:
+            - type: string
+              name: title
+              label: Title
+              description: The title of the site
+            - type: image
+              name: img_url
+              label: Image
+              description: The preview image of the site
+              required: true
+            - type: string
+              name: url
+              label: Site URL
+              widget: url
+              required: true

@@ -1,0 +1,15 @@
+@import "../sass/variables";
+
+.enterprise-contact-form {
+  margin: 80px auto 0 auto;
+  max-width: 900px;
+
+  h1 {
+    color: map-get($palette, "accent");
+    font-size: 40px;
+  }
+
+  .form-row {
+    margin-top: 20px;
+  }
+}

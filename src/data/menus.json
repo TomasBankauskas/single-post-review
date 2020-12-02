@@ -1,0 +1,132 @@
+{
+    "footer": [
+        {
+            "url": "https://www.stackbit.com/docs/",
+            "title": "Documentation",
+            "weight": 1,
+            "identifier": "documentation"
+        },
+        {
+            "identifier": "support",
+            "title": "Support",
+            "url": "/support",
+            "weight": 2,
+            "type": "site_menu_item"
+        },
+        {
+            "url": "/medium/",
+            "title": "Medium Importer",
+            "weight": 3,
+            "identifier": "medium-importer"
+        },
+        {
+            "url": "/themes",
+            "title": "Themes",
+            "weight": 4,
+            "identifier": "themes"
+        },
+        {
+            "url": "https://app.stackbit.com/create",
+            "title": "Site Builder",
+            "weight": 5,
+            "identifier": "site-builder-footer"
+        },
+        {
+            "url": "/blog",
+            "title": "Blog",
+            "weight": 6,
+            "identifier": "blog"
+        },
+        {
+            "url": "/about",
+            "title": "About",
+            "weight": 7,
+            "identifier": "about"
+        },
+        {
+            "identifier": "jobs",
+            "title": "Jobs",
+            "url": "/jobs",
+            "weight": 8,
+            "type": "site_menu_item"
+        },
+        {
+            "url": "/contact",
+            "title": "Contact",
+            "weight": 9,
+            "identifier": "contact"
+        }
+    ],
+    "footer_legal": [
+        {
+            "url": "/tos",
+            "title": "Terms",
+            "weight": 1,
+            "identifier": "terms"
+        },
+        {
+            "url": "/privacy",
+            "title": "Privacy",
+            "weight": 2,
+            "identifier": "privacy"
+        },
+        {
+            "url": "/license",
+            "title": "License",
+            "weight": 3,
+            "identifier": "license"
+        }
+    ],
+    "main_alt": [
+        {
+            "url": "https://app.stackbit.com/create",
+            "title": "Site Builder",
+            "weight": 3,
+            "identifier": "sitebuilder2"
+        },
+        {
+            "url": "https://app.stackbit.com",
+            "title": "Sign In",
+            "weight": 4,
+            "identifier": "sign-in"
+        }
+    ],
+    "main": [
+        {
+            "url": "/themes",
+            "title": "Themes",
+            "weight": 1,
+            "identifier": "themes"
+        },
+        {
+            "url": "/how-it-works",
+            "title": "How It Works",
+            "weight": 2,
+            "identifier": "how-it-works"
+        },
+        {
+            "url": "/agencies",
+            "title": "Agencies",
+            "weight": 3,
+            "identifier": "agencies"
+        },
+        {
+            "url": "/marketers",
+            "title": "Marketers",
+            "weight": 4,
+            "identifier": "marketers"
+        },
+        {
+            "url": "https://app.stackbit.com/create",
+            "title": "Site Builder",
+            "weight": 5,
+            "identifier": "sitebuilder"
+        },
+        {
+            "url": "https://app.stackbit.com/",
+            "title": "Sign In",
+            "weight": 6,
+            "identifier": "login"
+        }
+    ]
+}

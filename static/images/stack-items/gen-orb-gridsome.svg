@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="314px" height="314px" viewBox="0 0 314 314" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>gridsome</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="124" cy="124" r="124"></circle>
+        <filter x="-22.6%" y="-18.5%" width="145.2%" height="145.2%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="10" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="17" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="49.9332186%" y1="99.9766559%" x2="49.9332186%" y2="26.7497889%" id="linearGradient-3">
+            <stop stop-color="#00A672" offset="0%"></stop>
+            <stop stop-color="#006B4A" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="gridsome" transform="translate(33.000000, 23.000000)">
+            <g id="Oval">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+            </g>
+            <g id="logo-circle-normal" transform="translate(47.000000, 47.000000)">
+                <path d="M139.908981,64.038587 C147.349823,63.6805707 153.936481,69.4530571 154.578804,76.9006386 C157.362065,112.928451 124.390027,153.28784 77.9254076,154.578383 C38.769375,155.545027 0.0427934783,124.196277 0.0427934783,76.7970245 C0.0427934783,69.3271196 6.2155,63.2715897 13.6648505,63.2715897 C21.1141168,63.2715897 27.1527989,69.3271196 27.1527989,76.7970245 C27.1527989,107.975611 52.2223641,128.15341 77.2616033,127.535516 C108.086386,126.679226 128.12519,99.9888995 127.082731,78.1966576 C126.725557,70.7351766 132.468139,64.3966033 139.908981,64.038587 Z" id="Path" fill="url(#linearGradient-3)" fill-rule="nonzero"></path>
+                <path d="M106.21375,77.8462228 C106.21375,70.1981522 112.451658,63.9985734 120.146902,63.9985734 L140.452745,63.9985734 C148.147568,63.9985734 154.578804,70.1981522 154.578804,77.8462228 C154.578804,85.4938723 148.147568,91.6938723 140.452745,91.6938723 L120.146902,91.6938723 C112.451658,91.6938723 106.21375,85.4938723 106.21375,77.8462228 Z" id="Path" fill="#00A672" fill-rule="nonzero"></path>
+                <path d="M63.608125,77.8664402 C63.608125,70.2074185 69.8068614,63.9985734 77.4444022,63.9985734 C85.0823641,63.9985734 91.2811005,70.2074185 91.2811005,77.8664402 C91.2811005,85.525462 85.0823641,91.7343071 77.4444022,91.7343071 C69.8068614,91.7343071 63.608125,85.525462 63.608125,77.8664402 Z" id="Path" fill="#00A672" fill-rule="nonzero"></path>
+                <path d="M90.8973913,13.0730707 C91.2065489,20.5366576 85.4235326,26.8381658 77.9805842,27.1481658 C45.8505163,28.4863043 26.2354348,53.7390897 27.1902853,77.7169158 C27.4876495,85.1809239 21.8154076,91.473587 14.372038,91.7713723 C6.9285,92.0695788 0.382782609,86.0456386 0.0855869565,78.5816304 C-1.47026766,39.5073098 31.0652853,0.878782609 76.8610462,0.12016712 C84.3039946,-0.189790761 90.5882337,5.60935734 90.8973913,13.0730707 Z" id="Path" fill="#00A672"></path>
+            </g>
+        </g>
+    </g>
+</svg>

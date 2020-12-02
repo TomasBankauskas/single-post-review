@@ -1,0 +1,34 @@
+@import "../sass/variables";
+
+.feature-highlight {
+  color: map-get($palette, "primary");
+  padding: 20px 26px;
+  text-align: center;
+
+  &.feature-highlight-theme-accent {
+    color: map-get($palette, "bg1");
+  }
+
+  @media (min-width: 768px) {
+    padding: 50px 70px;
+  }
+}
+
+.feature-highlight-title {
+  color: map-get($palette, "accent");
+  font-size: 40px;
+
+  .feature-highlight-theme-accent & {
+    color: map-get($palette, "bg1");
+  }
+}
+
+.stackable-section {
+  .feature-highlight {
+    padding: 40px 26px;
+
+    @media (min-width: 768px) {
+      padding: 40px 70px;
+    }
+  }
+}

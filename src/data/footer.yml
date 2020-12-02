@@ -1,0 +1,41 @@
+cta_title: 'Make The Web, Better.'
+social_links:
+  - url: 'https://github.com/stackbithq'
+    icon: github
+    title: GitHub
+  - url: 'https://twitter.com/stackbithq'
+    icon: twitter
+    title: Twitter
+cta_enabled: true
+copyright: Copyright &copy; 2020 Stackbit. Made with Stackbit
+cta_actions:
+  - has_arrow: false
+    label: Build a Jamstack Site with Stackbit
+    url: 'https://app.stackbit.com/create'
+    new_window: false
+link_groups:
+  - links:
+      - title: Site Builder
+        url: 'https://app.stackbit.com/create'
+      - title: Medium Importer
+        url: 'https://www.stackbit.com/medium/'
+      - title: Documentation
+        url: 'https://docs.stackbit.com/'
+    title: Resources
+  - links:
+      - title: About
+        url: about
+      - title: Blog
+        url: blog
+      - title: Contact
+        url: contact
+    title: Company
+  - links:
+      - title: Terms
+        url: /tos
+      - title: Privacy
+        url: /privacy
+      - title: License
+        url: /license
+    title: Legal
+logo_img: /images/logo_alt.svg

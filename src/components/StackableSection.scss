@@ -1,0 +1,109 @@
+@import "../sass/variables";
+
+$section-padding: 4%;
+
+.stackable-section {
+  color: white;
+  position: relative;
+  text-align: center;
+}
+
+.stackable-section + *:not(.stackable-section) {
+  margin-top: 5%;
+}
+
+.stackable-section-inner,
+.stackable-section-inner:before,
+.stackable-section-inner:after {
+  background-color: map-get($palette, "bg1");
+}
+
+.stackable-section-theme-accent {
+  .stackable-section-inner,
+  .stackable-section-inner:before,
+  .stackable-section-inner:after {
+    background-color: map-get($palette, "accent");
+  }
+}
+
+.stackable-section-theme-light {
+  .stackable-section-inner,
+  .stackable-section-inner:before,
+  .stackable-section-inner:after {
+    background-color: map-get($palette, "bg2");
+  }
+}
+
+.stackable-section-theme-light,
+.stackable-section-theme-accent {
+  &:last-child {
+    margin-bottom: 30px;
+  }
+
+  &.stackable-section-orientation-left {
+    &:last-child {
+      @media (min-width: 960px) {
+        margin-bottom: 40px;
+      }
+
+      @media (min-width: 2000px) {
+        margin-bottom: 3%;
+      }
+    }
+  }
+}
+
+.stackable-section-inner {
+  background-color: transparent;
+  position: relative;
+
+  &:before,
+  &:after {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+
+  .stackable-section-orientation-left &:before {
+    transform: skewY(2deg);
+    transform-origin: bottom right;
+  }
+
+  .stackable-section-orientation-left &:after {
+    transform: skewY(-2deg);
+    transform-origin: top right;
+  }
+
+  .stackable-section-orientation-right &:before {
+    transform: skewY(-2deg);
+    transform-origin: bottom left;
+  }
+
+  .stackable-section-orientation-right &:after {
+    transform: skewY(2deg);
+    transform-origin: top left;
+  }
+
+  .stackable-section-effect-top &:before {
+    top: 0;
+  }
+
+  .stackable-section-effect-bottom &:after {
+    bottom: 0;
+  }
+}
+
+.stackable-section-content {
+  position: relative;
+  z-index: 1;
+
+  .stackable-section-effect-top & {
+    padding-top: $section-padding;
+  }
+
+  .stackable-section-effect-bottom & {
+    padding-bottom: $section-padding;
+  }
+}

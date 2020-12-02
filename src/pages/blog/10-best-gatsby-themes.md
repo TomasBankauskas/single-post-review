@@ -13,38 +13,36 @@ subtitle: >-
   help you get started on your next Gatsby Jamstack site.
 ---
 
-One of Gatsby's strengths is in the size of its community and ecosystem of plugins. This means that there are a lot of themes for a Gatsby developer to choose from as a starting point for their new project. In fact, as of this writing, there are 211 themes listed on the [Jamstack Themes site](https://jamstackthemes.dev/), which aims to be comprehensive resource for themes across all Jamstack tools.
+One of Gatsby's strengths is in the size of its community and ecosystem of plugins. This means that there are a lot of themes for a Gatsby developer to choose from as a starting point for their new project.  I listed my favorite themes below, based on aesthetic considerations and the features of the themes. For instance, does it support a CMS? Does it have unique capabilities? Is it only part of another theme? With that in mind, here are my top 10 favorite Gatsby themes by prioritized order of quality.
 
-To help you out, I went through all [211 themes](https://jamstackthemes.dev/#ssg=gatsby) and picked my personal top 10. Obviously, these are in part based on my own personal aesthetic preferences, but I also took into account the features of the theme. For instance, does it support a CMS? Does it have unique capabilities? Is it only a port of a another theme? So, with that in mind, here are my favorites, in no particular order.
+## [Azimuth](https://app.stackbit.com/create?theme=azimuth&utm_source=blog&utm_campaing=gatsbythemes)
 
-## [Azimuth](https://app.stackbit.com/create?theme=azimuth)
-
-[![Azimuth](/images/themes/azimuth-gatsby-theme.png)](https://app.stackbit.com/create?theme=azimuth)
+[![Azimuth](/images/themes/azimuth-gatsby-theme.png)](https://app.stackbit.com/create?theme=azimuth&utm_source=blog&utm_campaing=gatsbythemes)
 
 **By**: Stackbit<br>
-**Demo**: <https://themes.stackbit.com/demos/azimuth/><br>
-**Supported CMS**: Sanity, DatoCMS, Contentful, NetlifyCMS<br>
+**Demo**: <https://themes.stackbit.com/demos/azimuth&utm_source=blog&utm_campaign=gatsbythemes><br>
+**Supported CMS**: Sanity, DatoCMS, Contentful, NetlifyCMS, Forestry CMS, Git<br>
 
-This is one of my favorite of our Stackbit templates. It's designed for a business like a SaaS service, for example. I should note that to use this with Gatsby, you'll have to generate the site using the [Stackbit site builder](https://app.stackbit.com/create), which is free.
+This is one of my favorite Stackbit templates. It's designed for a business like a SaaS service, for example, so it is fully featured and extremely versatile, packed with modules and feature options. It also looks great on mobile which is very important. To use this theme with Gatsby, head over to [Stackbit](https://app.stackbit.com/create?theme=azimuth&utm_source=blog&utm_campaing=gatsbythemes) and generate a site for free. From there you'll get a fully-functioning Azimuth Gatsby site in about 60 seconds, and you'll be able to easily edit it on the Stackbit Studio.
 
 <div>
-<a href="https://app.stackbit.com/create?theme=azimuth" class="button-component button-component-theme-accent">Create Azimuth Gatsby Site</a>
+<a href="https://app.stackbit.com/create?theme=azimuth&utm_source=blog&utm_campaing=gatsbythemes" class="button-component button-component-theme-accent">Create Azimuth Gatsby Site</a>
 </div>
 
 ---
 
-## [Fjord](https://app.stackbit.com/create?theme=fjord)
+## [Fjord](https://app.stackbit.com/create?theme=fjord&utm_source=blog&utm_campaing=gatsbythemes)
 
-[![Fjord](/images/themes/fjord-gatsby-theme.png)](https://app.stackbit.com/create?theme=fjord)
+[![Fjord](/images/themes/fjord-gatsby-theme.png)](https://app.stackbit.com/create?theme=fjord&utm_source=blog&utm_campaing=gatsbythemes)
 
 **By**: Stackbit<br>
-**Demo**: <https://themes.stackbit.com/demos/fjord/><br>
-**Supported CMS**: Sanity, DatoCMS, Contentful, NetlifyCMS<br>
+**Demo**: <https://themes.stackbit.com/demos/fjord&utm_source=blog&utm_campaing=gatsbythemes><br>
+**Supported CMS**: Sanity, DatoCMS, Contentful, NetlifyCMS, Forestry CMS, Git<br>
 
-Another one of my favorite Stackbit templates is a great theme for a blog.. I should note that to use this with Gatsby, you'll have to generate the site using the [Stackbit site builder](https://app.stackbit.com/create), which is free.
+Another one of my favorite Stackbit templates is this beautiful blog theme. It's a great fit for personal websites, artist showcases and portfolios, to name a few. This Gatsby theme is especially easy to use and friendly for non-developers, so you can invite collaborators to join your site and add their content independently. To create this Fjord Gatsby site, go to [Stackbit](https://app.stackbit.com/create?theme=fjord&utm_source=blog&utm_campaing=gatsbythemes) and generate a free Jamstack site. Within about a minute you'll be inside the Stackbit Studio, ready to start editing.
 
 <div>
-<a href="https://app.stackbit.com/create?theme=fjord" class="button-component button-component-theme-accent">Create Fjord Gatsby Site</a>
+<a href="https://app.stackbit.com/create?theme=fjord&utm_source=blog&utm_campaing=gatsbythemes" class="button-component button-component-theme-accent">Create Fjord Gatsby Site</a>
 </div>
 
 ---
@@ -57,7 +55,7 @@ Another one of my favorite Stackbit templates is a great theme for a blog.. I sh
 **Demo**: <https://foundation.stackrole.com/><br>
 **Supported CMS**: Netlify CMS<br>
 
-This is a personal web site and blog theme that is simple and clean. It supports a one-click deployment to Netlify and is well documented, both in terms of installation and use.
+This is a personal website and blog theme that is simple and clean. It supports a one-click deployment to Netlify and is well documented, both in terms of installation and use.
 
 ---
 
@@ -142,5 +140,8 @@ This is specifically a portfolio site for photographers that uses a Contentful b
 **Supported CMS**: Contentful<br>
 
 Another developer portfolio site that has some nice animations and emphasizes being PWA-ready and it's excellent Lighthouse scores.
+
+## [More Jamstack Themes](https://jamstackthemes.dev&utm_source=blog&utm_campaign=gatsbythemes)
+Didn't find what you were looking for? No worries. As of this writing, there are 257 Gatsby themes listed on the [Jamstack Themes site](https://jamstackthemes.dev&utm_source=blog&utm_campaign=gatsbythemes), which is the most comprehensive resource for themes across all Jamstack tools. There you can filter Jamstack themes by CMS, Static Site Generator, and more. Alternatively, head over to [Stackbit](https://www.stackbit.com&utm_source=blog&utm_campaign=gatsbythemes) to choose from our collection and build your Jamstack website in 60 seconds or less.
 
 ---

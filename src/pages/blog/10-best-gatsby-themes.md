@@ -1,16 +1,16 @@
 ---
-thumb_img_path: '/images/1592228233-10-gatsby-themes-sm.png'
-content_img_path: '/images/1592228238-10-gatsby-themes.png'
+thumb_img_path: /images/1592228233-10-gatsby-themes-sm.png
+content_img_path: /images/1592228238-10-gatsby-themes.png
 template: post
 title: 10 of the Best Gatsby Themes
 excerpt: >-
-    Exploring some of the best options for free and open source Gatsby themes to
-    help you get started on your next Gatsby Jamstack site.
+  Exploring some of the best options for free and open source Gatsby themes to
+  help you get started on your next Gatsby Jamstack site.
 date: '2020-06-15'
 author: src/data/authors/brian-rinaldi.yml
 subtitle: >-
-    Exploring some of the best options for free and open source Gatsby themes to
-    help you get started on your next Gatsby Jamstack site.
+  Exploring some of the best options for free and open source Gatsby themes to
+  help you get started on your next Gatsby Jamstack site.
 ---
 
 One of Gatsby's strengths is in the size of its community and ecosystem of plugins. This means that there are a lot of themes for a Gatsby developer to choose from as a starting point for their new project. In fact, as of this writing, there are 211 themes listed on the [Jamstack Themes site](https://jamstackthemes.dev/), which aims to be comprehensive resource for themes across all Jamstack tools.
@@ -144,3 +144,7 @@ This is specifically a portfolio site for photographers that uses a Contentful b
 Another developer portfolio site that has some nice animations and emphasizes being PWA-ready and it's excellent Lighthouse scores.
 
 ---
+
+## Didint find what you where looking for
+
+[## Link](www.stackbit.com)

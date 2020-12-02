@@ -15,34 +15,34 @@ subtitle: >-
 
 One of Gatsby's strengths is in the size of its community and ecosystem of plugins. This means that there are many themes for Gatsby developers to choose from as a starting point for their new project.  I listed my 10 favorites Gatsby themes below, in order of quality based on aesthetics and features like CMS support, unique capabilities, etc.  
 
-## [Azimuth](https://app.stackbit.com/create?theme=azimuth&utm_source=blog&utm_campaing=gatsbythemes)
+## [Azimuth](https://app.stackbit.com/create?theme=azimuth&utm_source=blog&utm_campaign=gatsbythemes)
 
-[![Azimuth](/images/themes/azimuth-gatsby-theme.png)](https://app.stackbit.com/create?theme=azimuth&utm_source=blog&utm_campaing=gatsbythemes)
+[![Azimuth](/images/themes/azimuth-gatsby-theme.png)](https://app.stackbit.com/create?theme=azimuth&utm_source=blog&utm_campaign=gatsbythemes)
 
 **By**: Stackbit<br>
 **Demo**: <https://themes.stackbit.com/demos/azimuth><br>
 **Supported CMS**: Sanity, DatoCMS, Contentful, NetlifyCMS, Forestry CMS, Git<br>
 
-This is one of my favorite Stackbit templates. It's designed for a business like a SaaS service, for example, so it is fully featured and extremely versatile, packed with modules and feature options. It also looks great on mobile which is very important. To use this theme with Gatsby, head over to [Stackbit](https://app.stackbit.com/create?theme=azimuth&utm_source=blog&utm_campaing=gatsbythemes) and generate a site for free. From there you'll get a fully-functioning Azimuth Gatsby site in about 60 seconds, and you'll be able to easily edit it on the Stackbit Studio.
+This is one of my favorite Stackbit templates. It's designed for a business like a SaaS service, for example, so it is fully featured and extremely versatile, packed with modules and feature options. It also looks great on mobile which is very important. To use this theme with Gatsby, head over to [Stackbit](https://app.stackbit.com/create?theme=azimuth&utm_source=blog&utm_campaign=gatsbythemes) and generate a site for free. From there you'll get a fully-functioning Azimuth Gatsby site in about 60 seconds, and you'll be able to easily edit it on the Stackbit Studio.
 
 <div>
-<a href="https://app.stackbit.com/create?theme=azimuth&utm_source=blog&utm_campaing=gatsbythemes" class="button-component button-component-theme-accent">Create Azimuth Gatsby Site</a>
+<a href="https://app.stackbit.com/create?theme=azimuth&utm_source=blog&utm_campaign=gatsbythemes" class="button-component button-component-theme-accent">Create Azimuth Gatsby Site</a>
 </div>
 
 ---
 
-## [Fjord](https://app.stackbit.com/create?theme=fjord&utm_source=blog&utm_campaing=gatsbythemes)
+## [Fjord](https://app.stackbit.com/create?theme=fjord&utm_source=blog&utm_campaign=gatsbythemes)
 
-[![Fjord](/images/themes/fjord-gatsby-theme.png)](https://app.stackbit.com/create?theme=fjord&utm_source=blog&utm_campaing=gatsbythemes)
+[![Fjord](/images/themes/fjord-gatsby-theme.png)](https://app.stackbit.com/create?theme=fjord&utm_source=blog&utm_campaign=gatsbythemes)
 
 **By**: Stackbit<br>
 **Demo**: <https://themes.stackbit.com/demos/fjord><br>
 **Supported CMS**: Sanity, DatoCMS, Contentful, NetlifyCMS, Forestry CMS, Git<br>
 
-Another one of my favorite Stackbit templates is this beautiful blog theme. It's a great fit for personal websites, artist showcases and portfolios, to name a few. This Gatsby theme is especially easy to use and friendly for non-developers, so you can invite collaborators to join your site and add their content independently. To create this Fjord Gatsby site, go to [Stackbit](https://app.stackbit.com/create?theme=fjord&utm_source=blog&utm_campaing=gatsbythemes) and generate a free Jamstack site. Within about a minute you'll be inside the Stackbit Studio, ready to start editing.
+Another one of my favorite Stackbit templates is this beautiful blog theme. It's a great fit for personal websites, artist showcases and portfolios, to name a few. This Gatsby theme is especially easy to use and friendly for non-developers, so you can invite collaborators to join your site and add their content independently. To create this Fjord Gatsby site, go to [Stackbit](https://app.stackbit.com/create?theme=fjord&utm_source=blog&utm_campaign=gatsbythemes) and generate a free Jamstack site. Within about a minute you'll be inside the Stackbit Studio, ready to start editing.
 
 <div>
-<a href="https://app.stackbit.com/create?theme=fjord&utm_source=blog&utm_campaing=gatsbythemes" class="button-component button-component-theme-accent">Create Fjord Gatsby Site</a>
+<a href="https://app.stackbit.com/create?theme=fjord&utm_source=blog&utm_campaign=gatsbythemes" class="button-component button-component-theme-accent">Create Fjord Gatsby Site</a>
 </div>
 
 ---

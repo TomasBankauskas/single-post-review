@@ -13,7 +13,7 @@ subtitle: >-
   help you get started on your next Gatsby Jamstack site.
 ---
 
-One of Gatsby's strengths is in the size of its community and ecosystem of plugins. This means that there many themes for Gatsby developers to choose from as a starting point for their new project.  I listed my 10 favorites Gatsby themes below, in order of quality based on aesthetics and features like CMS support, unique capabilities, etc.  
+One of Gatsby's strengths is in the size of its community and ecosystem of plugins. This means that there are many themes for Gatsby developers to choose from as a starting point for their new project.  I listed my 10 favorites Gatsby themes below, in order of quality based on aesthetics and features like CMS support, unique capabilities, etc.  
 
 ## [Azimuth](https://app.stackbit.com/create?theme=azimuth&utm_source=blog&utm_campaing=gatsbythemes)
 

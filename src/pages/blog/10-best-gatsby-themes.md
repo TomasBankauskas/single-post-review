@@ -144,7 +144,3 @@ This is specifically a portfolio site for photographers that uses a Contentful b
 Another developer portfolio site that has some nice animations and emphasizes being PWA-ready and it's excellent Lighthouse scores.
 
 ---
-
-## Didint find what you where looking for
-
-## [Link](www.stackbit.com)

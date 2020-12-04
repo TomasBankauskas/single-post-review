@@ -1,6 +1,5 @@
 ---
 thumb_img_path: /images/1592228233-10-gatsby-themes-sm.png
-content_img_path: /images/1592228238-10-gatsby-themes.png
 template: post
 title: 10 of the Best Gatsby Themes
 excerpt: >-
